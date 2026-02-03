@@ -2,29 +2,7 @@
 
 **An AI-powered email management agent for efficient inbox triage**
 
-![GitHub](https://img.shields.io/github/license/your-username/ai-email-triage-assistant?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/your-username/ai-email-triage-assistant?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/your-username/ai-email-triage-assistant?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/your-username/ai-email-triage-assistant?style=for-the-badge)
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=flat-square&logo=python)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
-[![Gemini](https://img.shields.io/badge/Gemini-8E7CC3?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev/)
-
----
-
-## 🚀 Quick Demo
-
-<div align="center">
-  
-https://github.com/your-username/ai-email-triage-assistant/assets/12345678/demo-video.mp4
-
-*Auto-classification and intelligent email processing in action*
-
-</div>
-
----
 
 ## 🔍 Overview
 
@@ -156,16 +134,7 @@ streamlit run app.py
 
 ---
 
-## 🧠 Resume-Worthy Skills Demonstrated
 
-* **AI/ML Integration**: Real-world implementation of LLMs and RAG systems
-* **API Development**: Multiple API integrations (Gmail, Gemini, ScaleDown)
-* **System Design**: Layered architecture with clear separation of concerns
-* **Security**: OAuth 2.0 implementation and secure credential management
-* **Performance Optimization**: Context compression for cost reduction
-* **User Experience**: Interactive web interface design
-
----
 
 ## 🚀 Future Enhancements
 
@@ -180,50 +149,11 @@ streamlit run app.py
 
 ## 📚 Documentation
 
-* **Technical Documentation**: [AI_Email_Triage_Assistant_Documentation.docx](AI_Email_Triage_Assistant_Documentation.docx)
-* **API References**: See individual component documentation
-* **Troubleshooting Guide**: Included in technical documentation
+* **Technical Documentation**:https://docs.google.com/document/d/1CvLaKB3tZ5lJeNs1PABSAvAviK_PAI0m/edit?usp=drive_link&ouid=113157617250399139462&rtpof=true&sd=true
+
+
 
 ---
-
-## 📊 Project Stats
-
-![Alt](https://repobeats.axiom.co/api/embed/abcdef1234567890.svg "Repobeats analytics image")
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** your feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Good First Issues
-- [ ] Add support for Outlook/other email providers
-- [ ] Implement email scheduling features
-- [ ] Add multi-language support
-- [ ] Create mobile-responsive UI
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-* [Google AI](https://ai.google.dev/) for Gemini LLM
-* [ScaleDown](https://scaledown.ai/) for prompt compression
-* [Streamlit](https://streamlit.io/) for the web framework
-* [Google Cloud](https://cloud.google.com/) for Gmail API
-* [FAISS](https://github.com/facebookresearch/faiss) for vector search
-
----
-
-
-
-## Documenation 
-https://docs.google.com/document/d/1CvLaKB3tZ5lJeNs1PABSAvAviK_PAI0m/edit?usp=drive_link&ouid=113157617250399139462&rtpof=true&sd=true
 
 
 ## Sample images
