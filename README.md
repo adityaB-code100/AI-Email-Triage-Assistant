@@ -23,6 +23,9 @@ and applies RAG with Gemini LLM to summarize, categorize, and generate replies.
 4. `streamlit run app.py`
 
 
+## Documenation 
+https://docs.google.com/document/d/1CvLaKB3tZ5lJeNs1PABSAvAviK_PAI0m/edit?usp=drive_link&ouid=113157617250399139462&rtpof=true&sd=true
+
 
 ## Sample images
 ![alt text](images/I1.png) ![alt text](images/image-1.png) ![alt text](images/image-2.png) ![alt text](images/image-3.png) ![alt text](images/image.png)
