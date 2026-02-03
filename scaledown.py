@@ -7,7 +7,7 @@ load_dotenv()
 SCALEDOWN_API_KEY = os.getenv("SCALEDOWN_API_KEY")
 
 if not SCALEDOWN_API_KEY:
-    raise ValueError("❌ SCALEDOWN_API_KEY not found in .env")
+    raise ValueError(" SCALEDOWN_API_KEY not found in .env")
 
 SCALEDOWN_URL = "https://api.scaledown.xyz/compress/raw/"
 
@@ -34,7 +34,7 @@ def compress_with_scaledown(context: str, prompt: str) -> str:
     )
 
     if response.status_code != 200:
-        print("⚠️ ScaleDown compression failed, using original context")
+        print(" ScaleDown compression failed, using original context")
         return context + "\n" + prompt
 
     data = response.json()

@@ -42,7 +42,6 @@ Return only the category name.
         prompt=base_prompt
     )
 
-    # 🔒 Fallback if ScaleDown returns empty
     if not compressed_prompt or not compressed_prompt.strip():
         compressed_prompt = f"{base_prompt}\n\nEmail:\n{email_text}"
 
@@ -65,7 +64,6 @@ Provide:
         prompt=base_prompt
     )
 
-    # 🔒 Fallback
     if not compressed_prompt or not compressed_prompt.strip():
         compressed_prompt = f"{base_prompt}\n\nThread:\n{context}"
 
@@ -80,7 +78,6 @@ def generate_reply(summary):
         prompt=base_prompt
     )
 
-    # 🔒 Fallback
     if not compressed_prompt or not compressed_prompt.strip():
         compressed_prompt = f"{base_prompt}\n\nSummary:\n{summary}"
 
