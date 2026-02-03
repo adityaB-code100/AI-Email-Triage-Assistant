@@ -1,231 +1,28 @@
-# 📧 AI Email Triage Assistant
+# AI Email Triage Assistant
 
-**An AI-powered email management agent for efficient inbox triage**
+AI system that fetches emails from Gmail, compresses long threads using ScaleDown,
+and applies RAG with Gemini LLM to summarize, categorize, and generate replies.
 
----
+## Tech Stack
+- Gmail API
+- ScaleDown API (compression)
+- Gemini LLM
+- FAISS (RAG)
+- Streamlit
 
-## 🔍 Overview
+## Features
+- Email categorization (Urgent / Follow-Up / Spam)
+- Long thread summarization
+- Context-aware reply drafting
+- Token cost optimization via compression
 
-The **AI Email Triage Assistant** is an intelligent email management agent that automatically:
+## Run
+1. Add keys in `.env`
+2. Add Gmail `credentials.json`
+3. `pip install -r requirements.txt`
+4. `streamlit run app.py`
 
-* Compresses long email threads and context
-* Classifies emails by priority (Urgent / Follow-Up / Spam)
-* Summarizes email content and action items
-* Generates professional draft replies when required
 
-The system leverages **ScaleDown** for prompt compression and **Gemini LLM** for reasoning and generation, ensuring **high efficiency, low token usage, and fast response times**.
 
-This project demonstrates practical **agentic AI design**, combining decision-making, context optimization, and user-facing workflows.
-
----
-
-## 🎯 Key Features
-
-* 📥 Fetch emails securely using Gmail API (OAuth 2.0)
-* 🧠 Context-aware email classification
-* 🗜️ Prompt compression using ScaleDown (token-efficient)
-* 📝 Thread summarization with action items
-* ✉️ Auto-drafted replies for urgent emails
-* 🖥️ Clean, interactive Streamlit UI
-* 🔐 Privacy-safe (read-only Gmail access)
-
----
-
-## 🧠 Agent Workflow
-
-```
-User Action (Fetch Email)
-        ↓
-Gmail API (OAuth Authentication)
-        ↓
-Email Content Extraction
-        ↓
-ScaleDown Prompt Compression
-        ↓
-LLM Reasoning (Gemini)
-        ↓
-┌───────────────────────────────┐
-│ 1. Email Classification       │
-│ 2. Thread Summarization       │
-│ 3. Reply Generation (if needed)│
-└───────────────────────────────┘
-        ↓
-Streamlit UI Output
-```
-
----
-
-## 🏗️ System Architecture
-
-```
-┌─────────────┐
-│   Gmail API │
-│ (Read-only) │
-└──────┬──────┘
-       ↓
-┌──────────────────┐
-│ Email Ingestion  │
-│ (gmail_service) │
-└──────┬──────────┘
-       ↓
-┌────────────────────────────┐
-│ RAG + Agent Logic          │
-│ - Classification           │
-│ - Summarization            │
-│ - Reply Generation         │
-│ (rag_engine)               │
-└──────┬────────────────────┘
-       ↓
-┌────────────────────────────┐
-│ ScaleDown API              │
-│ (Prompt Compression Layer) │
-└──────┬────────────────────┘
-       ↓
-┌────────────────────────────┐
-│ Gemini LLM                 │
-│ (Reasoning & Generation)   │
-└──────┬────────────────────┘
-       ↓
-┌────────────────────────────┐
-│ Streamlit UI               │
-│ (User Interaction Layer)   │
-└────────────────────────────┘
-```
-
----
-
-## 🧰 Tech Stack
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![OpenAI](https://img.shields.io/badge/openai-412991.svg?style=for-the-badge&logo=openai&logoColor=white)
-
-| Component          | Technology            |
-| ------------------ | --------------------- |
-| Frontend           | Streamlit             |
-| Email API          | Gmail API (OAuth 2.0) |
-| LLM                | Google Gemini         |
-| Prompt Compression | ScaleDown API         |
-| Vector Store       | FAISS (lightweight)   |
-| Language           | Python 3.10+          |
-
----
-
-## 🗜️ Why ScaleDown?
-
-ScaleDown is used as a **context engineering layer** before every LLM call.
-
-### Benefits:
-
-* 🔻 Reduces token usage
-* ⚡ Faster responses
-* 🧠 Preserves semantic meaning
-* 🔁 Enables handling long email threads
-
-> ScaleDown compresses **email content + prompts** before they are sent to the LLM.
-
----
-
-## ▶️ How to Run Locally
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/ai-email-triage-assistant.git
-cd ai-email-triage-assistant
-```
-
----
-
-### 2️⃣ Create Virtual Environment
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-```
-
----
-
-### 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-### 4️⃣ Set Up Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-GEMINI_API_KEY=your_gemini_api_key
-SCALEDOWN_API_KEY=your_scaledown_api_key
-```
-
----
-
-### 5️⃣ Gmail API Setup
-
-1. Go to **Google Cloud Console**
-2. Enable **Gmail API**
-3. Create **OAuth Client ID**
-4. Download `credentials.json`
-5. Place `credentials.json` in project root
-
-⚠️ The app uses **read-only Gmail access**.
-
----
-
-### 6️⃣ Run the App
-
-```bash
-streamlit run app.py
-```
-
-The app will:
-
-* Open a browser window
-* Ask for Gmail authentication (first run only)
-* Fetch and analyze the latest email
-
----
-
-## 📌 Example Use Cases
-
-* Personal inbox prioritization
-* Productivity tools
-* AI agent demos
-* Resume / portfolio projects
-* Hackathons & interviews
-
----
-
-## 🧠 Resume Description (Ready to Use)
-
-> **Built an AI-powered Email Triage Assistant that compresses email context using ScaleDown, classifies messages, summarizes threads, and auto-generates replies using Gemini LLM, improving inbox efficiency and reducing token costs.**
-
----
-
-## 🚀 Future Enhancements (Optional)
-
-* Send replies via Gmail API
-* Auto-label or archive emails
-* Confidence score for classification
-* Learning from user feedback
-* Daily inbox summary agent
-
----
-
-## 🏁 Conclusion
-
-This project demonstrates **practical agentic AI design**, combining:
-
-* Context compression
-* Decision-making
-* Efficient LLM usage
-* Real-world API integration
-
-It is **demo-ready, resume-worthy, and scalable**.
+## sample images
+![alt text](images/I1.png) ![alt text](images/image-1.png) ![alt text](images/image-2.png) ![alt text](images/image-3.png) ![alt text](images/image.png)
