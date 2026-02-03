@@ -24,5 +24,5 @@ and applies RAG with Gemini LLM to summarize, categorize, and generate replies.
 
 
 
-## sample images
+## Sample images
 ![alt text](images/I1.png) ![alt text](images/image-1.png) ![alt text](images/image-2.png) ![alt text](images/image-3.png) ![alt text](images/image.png)
